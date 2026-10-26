@@ -2,8 +2,7 @@ import os
 import pandas as pd
 from sqlalchemy import create_engine
 
-# 1. Define your database connection string
-# (Using Docker port 5433 to avoid native Windows port 5432 conflict)
+# 1. Define database connection string
 DB_USER = "postgres"
 DB_PASSWORD = "mysecretpassword"
 DB_HOST = "127.0.0.1"
@@ -16,7 +15,7 @@ def load_data():
     # 2. Create the SQLAlchemy engine
     engine = create_engine(DATABASE_URL)
 
-    # Path to your processed data folder
+    # Path to processed data folder
     processed_dir = "data/processed"
 
     if not os.path.exists(processed_dir):

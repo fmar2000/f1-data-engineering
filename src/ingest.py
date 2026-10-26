@@ -2,10 +2,10 @@ import pandas as pd
 import requests
 import time
 
-# 1. Plug in your target session key here
+# 1. Plug in target session key 
 session_key = 9158
 
-# 2. List the core relational endpoints you want to fetch
+# 2. List the core relational endpoints to fetch
 endpoints = ["sessions", "drivers", "laps", "pit", "weather", "session_result"]
 
 print(f"Starting F1 pipeline extraction for session {session_key}...\n")

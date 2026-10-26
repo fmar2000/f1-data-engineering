@@ -9,7 +9,7 @@ def transform_f1_data():
   endpoints = ["sessions", "drivers", "laps", "pit", "weather", "session_result"]
 
   for endpoint in endpoints:
-    # Point to where your raw CSVs are saved inside the data/ folder
+    # Point to where raw CSVs are saved inside the data/ folder
     input_path = f"data/{endpoint}.csv"
 
     if not os.path.exists(input_path):
@@ -34,7 +34,7 @@ def transform_f1_data():
     if "session_key" in df.columns:
       df = df.dropna(subset=["session_key"])
 
-    # 4. Save to your new processed folder
+    # 4. Save to new processed folder
     output_path = f"data/processed/clean_{endpoint}.csv"
     df.to_csv(output_path, index=False)
 
